@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1{fill:#b3b3b3}.cls-2{fill:none}
+        </style>
+    </defs>
+    <g id="ic_keyboard_arrow_down" transform="translate(0 -.25)">
+        <g id="Icon_24px" data-name="Icon 24px" transform="translate(0 .25)">
+            <path id="Shape" d="M.947 0l3.082 3.076L7.112 0l.947.947-4.03 4.029L0 .947z" class="cls-1" transform="translate(3.971 5.708)"/>
+            <path id="Shape-2" d="M0 0h16v16H0z" class="cls-2" data-name="Shape"/>
+        </g>
+    </g>
+</svg>

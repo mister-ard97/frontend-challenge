@@ -1,0 +1,58 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+footer.footer-box {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: $light-gray;
+  margin-top: 80px;
+  padding: 40px 0px;
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    h5 {
+      font-weight: bold;
+    }
+
+    a {
+      font-size: 14px;
+      color: $black-color;
+      margin-bottom: 6px;
+    }
+    a:hover {
+      color: $red-primary;
+      text-decoration: none;
+    }
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+    }
+  }
+  .box-content-2 {
+    width: 240px;
+    h5 {
+      font-weight: bold;
+    }
+    p,
+    a,
+    p.contact-item {
+      font-size: 14px;
+      margin-bottom: 0px;
+    }
+    a {
+      color: $red-primary;
+    }
+    p.post-time {
+      color: $gray-color;
+      font-size: 12px;
+    }
+    .contact-item {
+      span {
+        font-weight: bold;
+      }
+    }
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+    }
+  }
+}

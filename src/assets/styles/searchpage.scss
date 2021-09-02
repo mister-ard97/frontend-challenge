@@ -1,0 +1,308 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+.search-page-view {
+  padding: 30px 0px;
+  h6 {
+    font-weight: bold;
+    @include media('<=tablet') {
+      margin-bottom: 10px !important;
+    }
+  }
+  p {
+    font-size: 14px;
+    color: $gray-color-4;
+    @include media('<=tablet') {
+      font-size: 10px;
+    }
+  }
+  .right-content {
+    width: 80% !important;
+    select {
+      margin-right: 20px;
+    }
+  }
+}
+
+.search-pagination {
+  &.top {
+    margin-bottom: 40px;
+  }
+  ul {
+    li {
+      &.page-item {
+        button {
+          padding: 18px;
+          font-weight: bold;
+          color: $black-color;
+          font-size: 18px;
+          margin: 0px 7px;
+          border-radius: 0.25rem;
+          &.outer {
+            margin: 0;
+          }
+          &.dot-pages {
+            border-color: transparent;
+            &:hover {
+              background-color: $white-color;
+              color: $black-color;
+              cursor: default;
+            }
+          }
+          &:hover {
+            border-color: $gray-color;
+            background-color: $white-color;
+            opacity: 0.6;
+            color: $black-color;
+          }
+        }
+        &.active {
+          .page-link {
+            border-color: $red-primary;
+            background-color: $red-primary;
+            color: $white-color;
+          }
+        }
+      }
+    }
+    @include media('>=tablet', '<=desktop') {
+      li {
+        &.page-item {
+          button {
+            padding: 10px;
+
+            font-size: 14px;
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+    @include media('<=tablet') {
+      li {
+        &.page-item {
+          button {
+            padding: 10px;
+
+            font-size: 12px;
+            margin: 0px 8px;
+          }
+        }
+      }
+    }
+    @include media('>=phone', '<=tablet') {
+      li {
+        &.page-item {
+          button {
+            padding: 10px;
+
+            font-size: 12px;
+            margin: 0px 3px;
+          }
+        }
+      }
+    }
+    @include media('<=phone') {
+      li {
+        &.page-item {
+          button {
+            padding: 5px;
+
+            font-size: 10px;
+            margin: 0px 2px;
+          }
+        }
+      }
+    }
+  }
+  @include media('>=tablet', '<=desktop') {
+    .pagination {
+      align-self: center;
+      justify-content: center;
+    }
+  }
+  @include media('<=tablet') {
+    .pagination {
+      align-self: center;
+      justify-content: center;
+    }
+  }
+}
+
+.search-data-view {
+  margin-bottom: 40px;
+  .grid-view {
+    a {
+      color: $black-color !important;
+      text-decoration: none;
+    }
+    .card-view {
+      border-radius: 0.25rem;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid $gray-color-3;
+      cursor: pointer;
+      @include media('<=tablet') {
+        margin-right: 0px;
+      }
+      img {
+        &.thumbnail {
+          width: 100%;
+          height: 120px;
+          object-fit: cover;
+          @include media('<=tablet') {
+            height: 200px;
+          }
+          @include media('<=tablet') {
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+      }
+      span {
+        font-size: 14px;
+      }
+      p {
+        font-weight: bold !important;
+        font-size: 14px;
+        &.highlight {
+          color: $red-primary;
+        }
+        &.location {
+          font-weight: normal !important;
+          margin: 8px 0px;
+          span {
+            font-weight: bold !important;
+          }
+        }
+        &.price {
+          color: $green-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .list-view {
+    @include media('<=tablet') {
+      .col-md-7 {
+        padding-right: 15px !important;
+      }
+    }
+    a {
+      color: $black-color !important;
+      text-decoration: none;
+    }
+    .card-view {
+      border-radius: 0.25rem;
+      margin-bottom: 20px;
+      padding: 10px 0px 10px 10px;
+      border: 1px solid $gray-color-3;
+      cursor: pointer;
+      @include media('<=tablet') {
+        padding: 10px 0px 10px 0px;
+      }
+      img {
+        &.thumbnail {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          @include media('>=phone', '<=tablet') {
+            padding: 15px;
+            padding-top: 5px;
+          }
+          @include media('<=phone') {
+            padding: 15px;
+            padding-top: 5px;
+          }
+        }
+      }
+      span {
+        font-size: 14px;
+        &.highlight {
+          color: $red-primary;
+        }
+      }
+      p {
+        font-weight: bold !important;
+        font-size: 14px;
+        &.location {
+          font-weight: normal !important;
+          span {
+            font-weight: bold !important;
+          }
+        }
+        &.price {
+          color: $green-color;
+        }
+        &.created {
+          font-weight: normal !important;
+          color: $gray-color-4;
+        }
+      }
+      .features-box {
+        padding: 10px;
+        background-color: $gray-color-6;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+.search-list-box {
+  padding: 30px 0px;
+  .my-card {
+    .content {
+      background-color: $gray-color-5;
+      .search-items-box {
+        padding: 20px;
+        span {
+          font-size: 12px;
+          color: $gray-color-4;
+        }
+        .second-box-content {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          display: flex;
+          input[type='radio'] {
+            &:after {
+              background-color: $gray-color-3;
+              border: 3px solid $gray-color-3;
+            }
+            &:checked:after {
+              border: 3px solid $gray-color-3;
+              background-color: $black-color !important;
+            }
+          }
+          .radio-item {
+            margin-right: 30px;
+            @include media('<=phone') {
+              margin-right: 10px;
+            }
+          }
+          span {
+            margin-left: 8px;
+            font-size: 14px;
+            @include media('<=phone') {
+              font-size: 10px;
+            }
+          }
+          .checkbox-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: $gray-color-3 !important;
+            padding: 10px;
+            border-radius: 0.25rem;
+          }
+        }
+        .input-container {
+          margin-bottom: 15px;
+        }
+      }
+      .divider {
+        border-bottom: 1px dashed $gray-color-4;
+      }
+    }
+  }
+}

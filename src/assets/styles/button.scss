@@ -1,0 +1,94 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+.my-button {
+  color: $white-color !important;
+  font-weight: bold !important;
+
+  &.half-left-capsule {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  &.half-right-capsule {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+
+  &.green-button {
+    background: $green-color !important;
+    padding: 20px 55px !important;
+    font-size: 18px !important;
+    @include media('>=tablet', '<=desktop') {
+      width: 180px !important;
+      padding: 10px 0px !important;
+      font-size: 14px !important;
+    }
+    @include media('<=tablet') {
+      width: 180px !important;
+      padding: 10px 0px !important;
+      font-size: 14px !important;
+    }
+    @include media('>=phone', '<=tablet') {
+      // 5 inch
+      width: 90px !important;
+      padding: 10px 0px !important;
+      font-size: 10px !important;
+      &.download {
+        width: 180px !important;
+        font-size: 14px !important;
+      }
+    }
+    @include media('<=phone') {
+      width: 75px !important;
+      padding: 5px 5px !important;
+      font-size: 8px !important;
+    }
+  }
+
+  &.blue-button {
+    background: $blue-color !important;
+    padding: 20px 55px !important;
+    font-size: 20px !important;
+    border-color: $blue-color;
+    @include media('>=tablet', '<=desktop') {
+      padding: 10px 25px !important;
+      font-size: 12px !important;
+    }
+    @include media('<=tablet') {
+      padding: 10px 25px !important;
+      font-size: 12px !important;
+    }
+    @include media('<=phone') {
+      padding: 10px 20px !important;
+      font-size: 8px !important;
+    }
+  }
+
+  &.yellow-button {
+    background: $yellow-color-2 !important;
+    border-color: $yellow-color-2;
+    &.search-button {
+      padding: 15px 35px;
+      font-size: 14px !important;
+      color: $gray-color-2 !important;
+    }
+  }
+
+  &.red-button {
+    background: $red-primary !important;
+    font-size: 14px !important;
+    padding: 10px 15px;
+    border-color: $red-primary;
+  }
+
+  &.gray-button {
+    background: $gray-color-7 !important;
+    font-size: 14px !important;
+    padding: 8px 10px;
+    border-color: $gray-color-7 !important;
+    &.active-view {
+      background: $red-primary !important;
+    }
+  }
+}

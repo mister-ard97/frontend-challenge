@@ -1,0 +1,126 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+select,
+[type='text'],
+[type='password'],
+[type='number'],
+[type='email'] {
+  &.my-form {
+    font-family: 'FontAwesome', 'Open Sans', sans-serif !important;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    display: block;
+    width: 100% !important;
+    padding: 15px 16px 15px 16px;
+    border-radius: 6px;
+    border: 1px solid $gray-color-3;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: $black-color;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box;
+    position: relative;
+    background-color: $white-color !important;
+  }
+  &.my-form-icon {
+    display: inline-block !important;
+    padding-right: 40px;
+    background: no-repeat scroll;
+    background-position: calc(100% - 16px);
+  }
+  &.my-form:focus {
+    color: $black-color;
+    background-color: $white-color;
+    outline: 0;
+    border-color: $gray-color;
+  }
+}
+
+select {
+  cursor: pointer !important;
+}
+
+input[type='radio'] {
+  &:after {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid $white-color;
+  }
+  &:checked:after {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $red-primary !important;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid $white-color;
+  }
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  // font-size: 2rem;
+  span {
+    &.checkbox-text {
+      font-size: 14px !important;
+      @include media('<=phone') {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+.checkbox__input {
+  display: grid;
+  grid-template-areas: 'checkbox';
+
+  > * {
+    grid-area: checkbox;
+  }
+  input {
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.checkbox__control {
+  display: inline-grid;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.25em;
+  border: 0.1em solid $black-color;
+  background-color: $white-color;
+  svg {
+    transition: transform 0.1s ease-in 25ms;
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+}
+
+.checkbox__input input:checked + .checkbox__control svg {
+  transform: scale(1);
+}
+
+.checkbox__input input:focus + .checkbox__control {
+  box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em $white-color;
+}

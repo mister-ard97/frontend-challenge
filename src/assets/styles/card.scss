@@ -1,0 +1,109 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+.my-card {
+  border: 1px solid $gray-card-color;
+  border-radius: 0.25rem;
+
+  .title {
+    padding: 20px;
+    background-color: $gray-color-3;
+    font-weight: bold;
+    font-size: 16px;
+    color: $gray-color-2;
+    border-bottom: 1px dashed $gray-color-4;
+  }
+
+  .content {
+    background-color: $gray-color-5;
+    .cat-box {
+      .cat-name {
+        background-color: $gray-color-5;
+        div {
+          padding: 18px;
+          display: flex;
+        }
+        span {
+          font-size: 14px;
+        }
+        display: flex;
+        svg {
+          font-size: 30px;
+          color: $gray-color-2;
+        }
+
+        .cat-value {
+          width: 70px;
+          background-color: $gray-color-6;
+        }
+      }
+      &:hover {
+        cursor: default;
+
+        .cat-name {
+          background-color: $gray-color-6;
+          svg {
+            color: $red-primary !important;
+          }
+        }
+      }
+    }
+
+    .contact-box {
+      padding: 20px;
+      img {
+        width: 120px;
+        margin-right: 10px;
+        @include media('>=phone', '<=tablet') {
+          align-self: center;
+        }
+        @include media('<=phone') {
+          align-self: center;
+        }
+      }
+      p,
+      span {
+        font-size: 14px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        &.contact {
+          font-weight: normal;
+          color: $red-primary;
+        }
+        &.learn {
+          font-weight: normal;
+          color: $gray-color-4;
+          .bold {
+            font-weight: bold;
+          }
+        }
+      }
+      span {
+        color: $gray-color-4;
+      }
+    }
+
+    .newsletter-box {
+      padding: 20px;
+      font-size: 14px;
+      input {
+        font-size: 14px;
+      }
+    }
+
+    .about-box-section {
+      padding: 20px;
+      font-size: 14px;
+      span {
+        &.strong {
+          font-weight: bold;
+        }
+        &.highlight {
+          color: $red-primary;
+        }
+      }
+    }
+  }
+}
