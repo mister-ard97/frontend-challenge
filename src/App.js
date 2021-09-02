@@ -18,10 +18,6 @@ import 'assets/styles/productpage.scss';
 
 import 'assets/styles/footer.scss';
 
-import moment from 'moment-timezone';
-
-moment.tz.setDefault('Asia/Jakarta');
-
 const Navbar = lazy(() => import('components/Navbar'));
 
 const HomePage = lazy(() => import('pages/Home'));
